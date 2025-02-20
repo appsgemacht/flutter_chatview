@@ -13,16 +13,16 @@ platforms:
   linux:
 
 environment:
-  sdk: '>=3.2.0 <4.0.0'
+  sdk: ">=3.2.0 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  intl: ^0.20.0
+  intl: ^0.19.0
   url_launcher: ^6.3.0
   emoji_picker_flutter: ^3.0.0
   any_link_preview: ^3.0.2
-  image_picker: '>=0.8.9 <2.0.0'
+  image_picker: ">=0.8.9 <2.0.0"
   audio_waveforms: ^1.2.0
   # For formatting time locale in message receipts
   cached_network_image: ^3.4.1
@@ -33,4 +33,3 @@ dev_dependencies:
   flutter_lints: ^2.0.1
 
 flutter:
-
