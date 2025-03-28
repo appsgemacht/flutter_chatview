@@ -20,19 +20,19 @@
  * SOFTWARE.
  */
 class PackageStrings {
-  static const String today = "Today";
-  static const String yesterday = "Yesterday";
-  static const String repliedToYou = "Replied to you";
-  static const String repliedBy = "Replied by";
-  static const String more = "More";
-  static const String unsend = "Unsend";
-  static const String reply = "Reply";
-  static const String replyTo = "Replying to";
-  static const String message = "Message";
+  static const String today = "Heute";
+  static const String yesterday = "Gestern";
+  static const String repliedToYou = "Hat dir geantwortet";
+  static const String repliedBy = "Antwort von";
+  static const String more = "Mehr";
+  static const String unsend = "Löschen";
+  static const String reply = "Antworten";
+  static const String replyTo = "Antworten an";
+  static const String message = "Nachricht";
   static const String reactionPopupTitle =
-      "Tap and hold to multiply your reaction";
-  static const String photo = "Photo";
-  static const String send = "Send";
-  static const String you = "You";
-  static const String report = "Report";
+      "Tippen und halten, um deine Reaktion zu vervielfachen";
+  static const String photo = "Foto";
+  static const String send = "Senden";
+  static const String you = "Du";
+  static const String report = "Melden";
 }
