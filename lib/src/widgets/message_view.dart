@@ -21,6 +21,7 @@
  */
 import 'package:chatview/chatview.dart';
 import 'package:chatview/src/widgets/chat_view_inherited_widget.dart';
+import 'package:chatview/src/widgets/message_time_widget.dart';
 import 'package:flutter/material.dart';
 
 import 'package:chatview/src/extensions/extensions.dart';
@@ -162,7 +163,9 @@ class _MessageViewState extends State<MessageView>
         bottom: widget.message.reaction.reactions.isNotEmpty ? 6 : 0,
       ),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.end,
+        crossAxisAlignment: widget.isMessageBySender
+            ? CrossAxisAlignment.end
+            : CrossAxisAlignment.start,
         children: [
           (() {
                 if (message.isAllEmoji) {
@@ -236,6 +239,16 @@ class _MessageViewState extends State<MessageView>
                 }
               }()) ??
               const SizedBox(),
+          if (!widget.message.messageType.isCustom)
+            Align(
+              alignment: widget.isMessageBySender
+                  ? Alignment.centerRight
+                  : Alignment.centerLeft,
+              child: MessageTimeWidget(
+                messageTime: widget.message.createdAt,
+                isCurrentUser: widget.isMessageBySender,
+              ),
+            ),
           ValueListenableBuilder(
             valueListenable: widget.message.statusNotifier,
             builder: (context, value, child) {
